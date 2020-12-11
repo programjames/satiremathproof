@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{titling}
+\usepackage{xcolor, soul}
+\definecolor{lightred}{rgb}{1, 0, 0}
+\definecolor{lightorange}{rgb}{1, 0.6, 0.2} 
+\definecolor{lightblue}{rgb}{0.8, 0.8, 1} 
+\definecolor{lightviolet}{rgb}{1, 0.2, 1} 
+\definecolor{lightgray}{rgb}{0.8, 0.8, 0.8} 
+\author{James Camacho}
+\pretitle{\begin{center}\LARGE\sethlcolor{lightred}}
+\posttitle{\end{center}\sethlcolor{lightorange}}
+\title{\hl{On} the Irrationality of Roots of 2}
+\sethlcolor{lightorange}
+\date{\hl{December 2, 1992}}
+\begin{document}
+	\maketitle
+	\par
+	It is well known that $\sqrt2$ is irrational. Here we prove that $\sqrt[n]{2}$ is also irrational for integers $n > 2$ \sethlcolor{green}\hl{using induction on $n$ with the base case $n=3$.} First we need to prove \sethlcolor{lightblue}\hl{a few preliminary lemmas}.
+	\newline
+	\hrule
+	\vspace{5mm}
+	\noindent
+	\sethlcolor{lightblue}\hl{
+	\textbf{Lemma 1:}} $\sqrt[3]{2}$ is irrational.
+	\par
+	\emph{Proof:} Suppose for the sake of contradiction that $\sqrt[3]{2}$ is rational. \sethlcolor{lightgray}\hl{So} it can be expressed as $\frac{p}{q}$ where \sethlcolor{lightviolet}\hl{$p\ge q\ge 1 \in\mathbb{N}$} and $(p, q) = 1.$ \sethlcolor{lightgray}\hl{So,}
+	$$2 = \frac{p^3}{q^3}$$
+	so
+	\begin{equation}
+	p^3 = q^3 + q^3.
+	\end{equation}
+	\sethlcolor{lightorange}\hl{There are no solutions to the equation $a^3 = b^3 + c^3$ for positive integers $a, b,$ and $c$ }\sethlcolor{yellow}\hl{(confirm; }\sethlcolor{lightorange}\hl{the proof should not take more than the margins of this paper)}, \sethlcolor{lightgray}\hl{so }there are no solutions to \sethlcolor{lightblue}\hl{$(1)$.} $\square$
+	\vspace{5mm}
+	\newline
+	\sethlcolor{lightblue}\hl{
+	\textbf{Lemma 2:}} If $r$ satisfies $\frac{1}{r} = \sqrt[n]{2r}$ then $r$ is irrational.
+	\par
+	\emph{Proof:} This implies that $r$ is a root to
+	$$\frac{1}{x^n} = 2x\Longleftrightarrow 2x^{n+1} - 1 = 0.$$
+	\sethlcolor{pink}\hl{By the Rational Root Theorem the only possible rational roots are $\pm 1$  and $\pm \frac{1}{2}$} but none of them are roots to this particular equation \sethlcolor{yellow}\hl{(confirm).} Therefore $r$ must be irrational. $\square$
+	\vspace{5mm}
+	\newline
+	\sethlcolor{lightblue}\hl{
+	\textbf{Lemma 3:}} If $\sqrt[n]{2}$ is irrational, \sethlcolor{lightgray}\hl{so} is $\sqrt[n+1]{2}$.
+	\par
+	\emph{Proof:} Suppose for the sake of contradiction that $\sqrt[n]{2}$ is irrational but $\sqrt[n+1]{2}$ is not. \sethlcolor{lightgray}\hl{So} $\sqrt[n+1]{2} = \frac{p}{q}$ for some positive integers $p\ge q$ and $(p, q) = 1$. \sethlcolor{lightgray}\hl{So,}
+	$$\sqrt[n]{2} = \left(\sqrt[n+1]{2}\right)^{1+\frac{1}{n}} = \frac{p}{q}\cdot \sqrt[n]{\frac{p}{q}}$$
+	\sethlcolor{lightgray}\hl{So}
+	$$\frac{p}{q} = \sqrt[n]{\frac{2q}{p}}$$
+	is rational. But by putting $r=\frac{q}{p}$, we get from \sethlcolor{lightblue}\hl{Lemma 2} that there is no rational solution to that equation! There is a contradiction, \sethlcolor{lightgray}\hl{so }$\sqrt[n+1]{2}$ is also irrational. $\square$
+	\newline
+	\hrule
+	\vspace{5mm}
+	\par
+	Now we can complete the proof. \sethlcolor{lightblue}\hl{Lemma 1} shows that the \sethlcolor{green}\hl{base case}, $n=3$, holds. \sethlcolor{lightblue}\hl{Lemma 3} shows that the \sethlcolor{green}\hl{inductive step holds}. \sethlcolor{lightgray}\hl{So,} the claim is true. \colorbox{lightviolet}{$\sqrt[n]{2}\in\mathbb{P}\ \ \forall n\in\mathbb{Z}_{\ge 3}.\qquad \blacksquare$}
+	\newpage
+	\title{Explanatory Notes}
+	\author{Identifying the Satire}
+	\date{December 2, 2020}
+	\maketitle
+	Math papers and textbooks have a distinct vocabulary from the rest of literature. Unlike physicists, many in mathematics prefer to leave out intuition in their proofs, resulting in a chains of equations, lemmas, and corollaries linked together by hence's, thus's, and therefore's. While a typical reading rate is over 30 pages/hour for novels, that rate drops by a factor of 10 when a math proof is the subject being perused. It is so much harder to read a math proof than to learn about, say, the Utility Monster thought experiment, not because the math concept is so much harder to understand but because the math authors \emph{made} it so much harder to understand.
+	\par
+	This paper satirizes the rhetoric mathematicians use to appear more perspicacious. In addition, it throws a few jibes at other common---but inefficient---approaches people use when writing proofs. I have color coded different parts of my piece, and below I have explained exactly what they are satirizing.
+	\begin{enumerate}
+		\item \sethlcolor{lightred}\hl{Many authors start their paper with "on" even when it has no use. In this paper the title "Roots of 2 are Irrational" would be clearer and simpler.}
+		\item \sethlcolor{lightorange}\hl{This is in reference to Fermat's Last Theorem. The proof of Fermat's Last Theorem was announced in 1993 by Andrew Wiles, over 300 years after the problem was initially proposed. The equation $a^3 = b^3 + c^3$ is a subset of the more general problem $a^n = b^n + c^n$, which has no solutions for $a, b, c > 0$ and $n \ge 3$. The case where $n=3$ was actually proven earlier, but even that proof is much more difficult than the original problem in this paper. This is satirizing how people use "overpowered" theorems to solve a problem when a more humble approach works just as well.}
+		\item \sethlcolor{yellow}\hl{In textbooks details are often left out of an example or proof, replaced by the word "confirm" in parenthesis. Normally these are just routine calculations that the author left out to not clutter the textbook, but sometimes it can be quite difficult to actually verify the logical leap that has been made. The second usage of confirm in this paper it just routine calculations, but the first (as has been previously discussed) is much harder than a simple confirm could justify.}
+		\item \sethlcolor{pink}\hl{Like the above, the Rational Root Theorem (RRT) is overkill. This problem can be solved by a similar method to how you prove the RRT, except the RRT is a far more general problem.}
+		\item \sethlcolor{green}\hl{``If we have no idea why a statement is true, we can still prove it by induction."\mbox{}\\
+		$\quad$ ---Gian-Carlo Rota}\mbox{}\\ \mbox{}\\
+		\hl{Induction is often the laziest way to solve for a math problem as it doesn't explain any intuition behind the solution, let alone how the original statement came to be discovered. Sometimes it is necessary to use it when no other solution can be found, but if someone immediately goes to use induction they are either lazy or under time pressure.}
+		\item \sethlcolor{lightblue}\hl{The addition of lemmas and numbering equations adds useless structure to the proof. Most textbooks number \emph{every} single equation, lemma, corollary and theorem. A single page might have ten numbered equations or five lemmas that are trivial and barely a paragraph long. Then, while reading chapter five in the textbook it will casually mention ``Corollary 3.20" or ``Equation 3.1.2." No one can remember what those numbers refer to. It would be much more intuitive for readers to be given a short description of the idea being referenced and a footnote saying, ``See pg. 56," so not only do readers understand what the theorem says but it's also quicker to find the proof of said theorem rather than flipping through all of Chapter 3 until they come to the right place.}\mbox{}\\ \mbox{}\\
+		\hl{One more thing to note is that Lemma 2 is misplaced in the satirical proof. It would make much more sense to eliminate Lemma 2 altogether and place it's text at the end of Lemma 3.}
+		\item \sethlcolor{lightviolet}\hl{Sometimes mathematicians overuse symbols. For example, what does that bottom line even mean?! How much harder would it have been to type out ``For all integers $n$ greater than or equal to $3$, the $n$th root of $2$ is irrational?"}
+		\item \sethlcolor{lightgray}\hl{Normally mathematicians spice up their proofs with a synonyms (i.e. therefore), but only so appears in the proof to exaggerate how often these words are used. Still, even this proof isn't that bad. Some proofs have hardly any words except the so's to string together the equations.}
+	\end{enumerate}
+\end{document}
